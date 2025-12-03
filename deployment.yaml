@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: formapp-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: formapp
+  template:
+    metadata:
+      labels:
+        app: formapp
+    spec:
+      containers:
+        - name: formapp
+          image: kavyakota18/app:v1 
+          ports:
+            - containerPort: 5000
