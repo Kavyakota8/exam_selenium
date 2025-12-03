@@ -4,7 +4,8 @@ pipeline {
         stage('Run Selenium Tests with pytest') {
             steps {
                     echo "Running Selenium Tests using pytest" 
-                    bat '"C:\Users\Kota Kavya Sri\AppData\Local\Programs\Python\Python38\python.exe" -m pip install -r requirements.txt' 
+                    bat '"C:/Users/Kota Kavya Sri/AppData/Local/Programs/Python/Python38/python.exe" -m pip install -r requirements.txt'
+ 
                     bat 'start /B python app.py' 
                     bat 'ping 127.0.0.1 -n 5 > nul' 
                     bat 'python -m pytest -v'
